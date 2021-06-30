@@ -16,6 +16,7 @@
   </head>
   <body>
     <div class="container">
+      <p id="click">Click with me</p>
       <div class="cartao">
         <img src="assets/img/folha.png" />
         <p>Mick's enterprise</p>
@@ -23,8 +24,34 @@
 
       <div class="cartao">
         <p>Micledson Carlos S. de Lima</p>
-        <p>mcsl9@aluno.ifal.edu.br</p>
+        <p><b>mcsl9@aluno.ifal.edu.br</b></p>
       </div>
     </div>
   </body>
+
+  <script>
+    const enterprise = document.querySelector(".cartao");
+    const infos = document.querySelectorAll(".cartao")[1];
+
+    enterprise.addEventListener("click", (event) => {
+      const name = prompt("Digite o nome da sua empresa");
+
+      if (!name) return;
+
+      enterprise.querySelector("p").innerHTML = `${name} enterprise`;
+    });
+
+    infos.addEventListener("click", (event) => {
+      const name = prompt("Digite seu nome");
+
+      if (!name) return;
+
+      const email = prompt("Digite Seu Email");
+
+      if (!email) return;
+
+      infos.querySelector("p").innerHTML = name;
+      infos.querySelectorAll("p")[1].innerHTML = `<b>${email}</b>`;
+    });
+  </script>
 </html>
