@@ -46,6 +46,10 @@ img {
   margin-bottom: 10px;
 }
 
+.cartao:hover {
+  cursor: pointer;
+}
+
 #click {
   font-size: 10px;
   color: rgba(0, 0, 0, 0.03);
