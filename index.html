@@ -50,6 +50,7 @@
 
       if (!name) return;
 
+      infos.querySelector("p").innerHTML = name;
       const email = prompt("Digite Seu Email");
 
       if (!email) return;
@@ -57,8 +58,6 @@
       validateEmail(email)
         ? (infos.querySelectorAll("p")[1].innerHTML = `<b>${email}</b>`)
         : alert("Email inválido!");
-
-      infos.querySelector("p").innerHTML = name;
     });
 
     function validateEmail(email) {
