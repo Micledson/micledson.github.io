@@ -1,12 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  font-family: "Fira Code";
-}
-
-body {
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,13 +6,6 @@ body {
 
   width: 100vw;
   height: 100vh;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .cartao {
@@ -53,4 +38,12 @@ img {
 #click {
   font-size: 10px;
   color: rgba(0, 0, 0, 0.03);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contato {
+  margin-top: 50px;
 }
