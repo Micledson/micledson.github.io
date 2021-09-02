@@ -50,8 +50,18 @@
 
       if (!email) return;
 
+      validateEmail(email)
+        ? (infos.querySelectorAll("p")[1].innerHTML = `<b>${email}</b>`)
+        : alert("Email inválido!");
+
       infos.querySelector("p").innerHTML = name;
-      infos.querySelectorAll("p")[1].innerHTML = `<b>${email}</b>`;
     });
+
+    function validateEmail(email) {
+      let regex = new RegExp(
+        /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi
+      );
+      return regex.test(email);
+    }
   </script>
 </html>
